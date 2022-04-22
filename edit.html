@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- bootsrap v5.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- seperate -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script> -->
+
+    <!-- Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- local css -->
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+</head>
+
+<body>
+    <!-- side nav -->
+    <div class="col-auto flex-column flex-shrink-0 vh-100 mn-sidebar">
+        <ul class="nav nav-pills nav-flush flex-column mb-auto justify-content-center">
+            <li class="d-flex justify-content-center align-items-center my-2">
+                <img src="./assets/pic/Rectangle63.svg" alt="">
+            </li>
+            <li class="nav-item d-flex justify-content-center">
+                <a href="#" class="nav-link-side active py-3 border-bottom d-flex justify-content-center text-start">
+                    <img src="./assets/pic/Group2.svg" alt="">
+                    <small style="color: #FFFFFF;">Dashboard</small>
+                </a>
+
+            </li>
+            <li class="nav-item d-flex justify-content-center dropdown-submenu active">
+                <a tabindex="-1" href="#"
+                    class="nav-link-side active py-3 border-bottom d-flex justify-content-center text-center">
+                    <img src="./assets/pic/fi_truck.svg" alt="">
+                    <small style="color: #FFFFFF;">Cars</small>
+                </a>
+                <ul class="dropdown-menu mn-vnavigation">
+                    <li class="nav-item"><a href="#">CARS</a></li>
+                    <li class="nav-item"><a href="#">List Car</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- horizontal nav -->
+    <div class="wrapper">
+        <nav class="col-auto flex-grow-1 navbar navbar-expand-lg navbar-light horizontal-nav">
+            <div class="container-fluid">
+                <img src="./assets/pic/Rectangle62.svg" alt="" style="margin-right: 100px; margin-left: 90px;">
+
+                <!-- responsive nav -->
+                <div class="navbar-toggler-icon">
+                    <span class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    </span>
+                </div>
+
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <!-- search box -->
+                    <form class="d-flex mx-4">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn general-txt search-btn" type="submit">Search</button>
+                    </form>
+
+                    <!-- Profile -->
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <img src="./assets/pic/Group15.svg" alt="" class="icon-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Unis Badri
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- main pages -->
+    <div class="main-pages">
+
+        <!-- Banner -->
+        <div class="banner">
+            <p><b>Cars ></b> <b>List Car ></b><small> Update Car Information</small></p>
+            <div class="row mt-4">
+                <div class="col">
+                    <h3 class="title">Update Car Information</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- form -->
+        <form>
+            <div class="form">
+                <div class="row mb-3">
+                    <label for="inputName" class="col-sm-2 col-form-label">Name<span
+                            style="color: red;">&#42;</span></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control input-form" id="inputName">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputPrice" class="col-sm-2 col-form-label">Rent<span
+                            style="color: red;">&#42;</span></label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control input-form" id="inputPrice">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputSize" class="col-sm-2 col-form-label">Size<span>&#42;</span></label>
+                    <div class="col-sm-10">
+                        <select class="form-select input-form" id="inputSize">
+                            <option selected>Choose...</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputPic" class="col-sm-2 col-form-label">Foto<span
+                            style="color: red;">&#42;</span></label>
+                    <div class="col-sm-10 file-upload">
+                        <div class="file-input input-form">
+                            <input type="file" name="file" value="" class="file" accept="image/*">
+                        </div>
+                        <small style="color: #8A8A8A;">File size max. 2MB</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="margin-top: 400px;">
+                <a href="/index.html"><button class="btn search-btn general-txt">Cancel</button></a>
+                <button type="submit" class="btn add-btn general-txt">Save</button>
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

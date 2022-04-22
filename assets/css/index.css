@@ -1,0 +1,208 @@
+body {
+  background-color: #e5e5e5;
+}
+
+/* horizontal nav  */
+.horizontal-nav {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  top: 0;
+}
+
+.nav-link-side {
+  border-radius: 0px !important;
+  transition: all 0.5s;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link-side small {
+  font-size: 12px;
+}
+
+.nav-item:hover {
+  background-color: #52525240 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* vertical submenu */
+.mn-sidebar {
+  display: table-cell;
+  position: relative;
+  vertical-align: top;
+  padding-bottom: 49px;
+  width: 80px;
+  z-index: 9;
+  position: fixed;
+  background-color: #0d28a6;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: 56px;
+  margin-left: -1px;
+  height: 94vh;
+  width: 220px;
+  background: #ffffff;
+}
+
+.dropmenu {
+  width: 46px;
+  background: #ffffff;
+}
+
+.mn-vnavigation li a {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  display: block;
+  padding: 14px 18px 13px 15px;
+  color: #1a1c20;
+  text-decoration: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* main-pages */
+.main-pages {
+  position: relative;
+  top: 70px;
+  margin-left: 310px;
+  height: auto;
+  padding: 14px 30px 14px 30px;
+  transition: all 0.3s;
+}
+
+/* option size button */
+.opt-btn {
+  border-color: #aeb7e1;
+  background-color: #ffffff;
+  color: #aeb7e1;
+  height: 36px;
+}
+
+.add-btn {
+  background-color: #0d28a6;
+  height: 36px;
+  color: #ffffff;
+}
+
+.search-btn {
+  border-color: #0d28a6;
+  color: #0d28a6;
+  background-color: #ffffff;
+}
+
+.search-btn:hover {
+  background-color: #0d28a6;
+  color: #ffffff;
+}
+
+.add-btn:hover,
+.opt-btn:hover {
+  background-color: #cfd4ed;
+}
+
+/* text style */
+.title {
+  size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.nav-txt {
+  size: 12px;
+  line-height: 18px;
+  font-weight: 300;
+}
+
+.general-txt {
+  size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.card-title {
+  size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.card-txt {
+  size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.card2-txt {
+  size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* form */
+.form {
+  background-color: #ffffff;
+  margin-top: 16px;
+  padding: 25px 16px 25px 16px;
+}
+
+/* input file */
+.input-form {
+  width: 339px;
+}
+.file-input {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  background: #ffffff;
+}
+
+.file-style {
+  border: none;
+  outline: none;
+}
+
+.txt {
+  width: 350px;
+  color: #999994;
+}
+
+/* Screen */
+@media screen and (min-width: 800px) {
+  .icon-nav {
+    width: 50px;
+  }
+  
+}
+/* 
+      ##Device = Laptops, Desktops
+      ##Screen = B/w 1025px to 1280px
+    */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .icon-nav {
+    width: 50px;
+  }
+
+  .main-pages {
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .side-nav {
+    margin-left: -280px;
+  }
+}
+/* 
+      ##Device = Most of the Smartphones Mobiles (Portrait)
+      ##Screen = B/w 320px to 479px
+    */
