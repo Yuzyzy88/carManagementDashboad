@@ -1,13 +1,11 @@
 pipeline {
     agent any
     stages {
-        //
         stage('SCM Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'user', url: 'https://github.com/Yuzyzy88/carManagementDashboad.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'user', url: 'https://github.com/Yuzyzy88/carManagementDashboad.git']]])
             }
         }
-        //
         stages('Create Image') {
             steps {
                 sh '''
@@ -15,7 +13,6 @@ pipeline {
                 '''
             }
         }
-        //
         stages('Push Image') {
             steps{
                 sh '''
