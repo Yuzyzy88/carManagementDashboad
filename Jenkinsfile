@@ -9,7 +9,8 @@ pipeline {
         stage('Create Image') {
             steps {
                 sh '''
-                docker build -t sulistiowatiayu/first-trial:v1 .
+                docker image rm sulistiowatiayu/first-trial:v1
+                docker build -no-cache -t sulistiowatiayu/first-trial:v1 . 
                 '''
             }
         }
@@ -26,8 +27,8 @@ pipeline {
         stage('Deploy image') {
             steps {
                 sh '''
-                docker run -it --rm --name carmanagementdashboard first-trial:v1 
-                docker run -p 3000:3000 -d --name carmanagementdashboard first-trial:v1 
+                docker stop carmanagment; docker rm carmanagment;
+                docker run -p 3000:3000 -d --name carmanagment sulistiowatiayu/first-trial:v1
                 '''
             }
         }
