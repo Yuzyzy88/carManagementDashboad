@@ -9,7 +9,6 @@ pipeline {
         stage('Create Image') {
             steps {
                 sh '''
-                sudo usermod -a -G docker $USER
                 docker build -t carmanagementdashboard/first-trial:v1 .
                 '''
             }
