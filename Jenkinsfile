@@ -9,7 +9,7 @@ pipeline {
         stage('Create Image') {
             steps {
                 sh '''
-                docker build -t carmanagementdashboard/first-trial:v1 .
+                sudo docker build -t carmanagementdashboard/first-trial:v1 .
                 '''
             }
         }
