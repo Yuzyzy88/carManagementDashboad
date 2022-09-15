@@ -9,7 +9,7 @@ pipeline {
         stage('Create Image') {
             steps {
                 sh '''
-                docker image rm sulistiowatiayu/first-trial:v1
+                docker image rm sulistiowatiayu/first-trial:v1 || echo "No existing image found"
                 docker build --no-cache -t sulistiowatiayu/first-trial:v1 . 
                 '''
             }
