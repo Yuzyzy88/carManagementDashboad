@@ -18,9 +18,10 @@ pipeline {
             steps {
                 sh '''
                 set +x
-                docker login --username=sulistiowatiayu --password=$dockerPassword
+                docker login 10.8.60.126:5000 --username=admin--password=$nexusPassword
                 set -x
-                docker push sulistiowatiayu/first-trial:v1
+                docker tag sulistiowatiayu/first-trial:v1 10.8.60.126:5000/first-trial:v1
+                docker push 10.8.60.126:5000/first-trial:v1
                 '''
             }
         }
