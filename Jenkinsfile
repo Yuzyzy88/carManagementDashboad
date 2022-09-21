@@ -29,7 +29,7 @@ pipeline {
                 sh '''
                 (docker stop carmanagment && docker rm carmanagment) || echo "No existing container running";
                 docker pull 10.8.60.126:5000/first-trial:v2
-                docker run -p 3000:80 -d --name sulistiowatiayu/first-trial:v2
+                docker run -p 3000:80 -d --name carmanagment 10.8.60.126:5000/first-trial:v2
                 '''
             }
         }
