@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh '''
                 docker image rm sulistiowatiayu/first-trial:v1 || echo "No existing image found"
-                docker build --no-cache -t sulistiowatiayu/first-trial:v1 . 
+                docker build --no-cache -t 10.8.60.126:5000/first-trial:v2 . 
                 '''
             }
         }
@@ -20,7 +20,6 @@ pipeline {
                 set +x
                 docker login --username=admin --password=$nexusPassword 10.8.60.126:5000
                 set -x
-                docker tag sulistiowatiayu/first-trial:v1 10.8.60.126:5000/first-trial:v1
                 docker push 10.8.60.126:5000/first-trial:v2
                 '''
             }
