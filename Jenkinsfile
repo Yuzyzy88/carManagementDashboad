@@ -40,7 +40,7 @@ pipeline {
             steps {
                 sh '''
                 set +x
-                docker login --username=nexusUser --password=$nexusPassword 
+                docker login --username=$nexusUser --password=$nexusPassword 
                 set -x
                 docker push sulistiowatiayu/first-trial:v8
                 '''
