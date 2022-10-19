@@ -1,6 +1,28 @@
 pipeline {
     agent any
     stages {
+
+        stage('Setup parameters') {
+            steps {
+                script {
+                    properties([
+                        parameters([
+                            password(
+                                defaultValue: 'admin',
+                                description: 'User for nexus',
+                                name:'nexusUser'
+                            ),
+                            password(
+                                defaultValue: '060201&160288Ka',
+                                description: 'Password for nexus',
+                                name:'nexusPassword'
+                            )
+                        ])
+                    ])
+                }
+            }
+        }
+
         stage('SCM Checkout') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout', deleteUntrackedNestedRepositories: true]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github-login', url: 'https://github.com/Yuzyzy88/carManagementDashboad.git']]])
@@ -10,7 +32,7 @@ pipeline {
             steps {
                 sh '''
                 docker image rm sulistiowatiayu/first-trial:v1 || echo "No existing image found"
-                docker build --no-cache -t 10.8.60.126:5000/first-trial:v2 . 
+                docker build --no-cache -t sulistiowatiayu/first-trial:v8 . 
                 '''
             }
         }
@@ -18,9 +40,9 @@ pipeline {
             steps {
                 sh '''
                 set +x
-                docker login --username=admin --password=$nexusPassword 10.8.60.126:5000
+                docker login --username=nexusUser --password=$nexusPassword 
                 set -x
-                docker push 10.8.60.126:5000/first-trial:v2
+                docker push sulistiowatiayu/first-trial:v8
                 '''
             }
         }
